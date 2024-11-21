@@ -1,0 +1,27 @@
+ <!-- Register Form -->
+ <form class="signin-form" style="display:none;">
+    <div class="input-group">
+        <label for="username">
+            <i class="fas fa-user"></i>
+        </label>
+        <input type="text" id="username" placeholder="Username" required>
+    </div>
+    <div class="input-group">
+        <label for="newemail">
+            <i class="fas fa-envelope"></i>
+        </label>
+        <input type="email" id="newemail" placeholder="Email" required>
+    </div>
+    <div class="input-group">
+        <label for="newpassword">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="password" id="newpassword" placeholder="Password" required>
+    </div>
+    <button type="submit" class="btn-login">REGISTER</button>
+    <div class="switch">
+        <p>Already have an account? 
+            <span class="link" onclick="toggleTab('login')">Log in</span>
+        </p>
+    </div>
+</form>

@@ -1,0 +1,194 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff; /* Azul cielo claro */
+    overflow: hidden;
+}
+
+/* Container Styling with Neon border effect */
+.container {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    background: white; /* Blanco */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 8px solid #39ff14; /* Verde neón */
+    animation: neonGlow 1.5s ease-in-out infinite alternate; /* Animación de resplandor */
+}
+
+/* Neon Glow Effect */
+@keyframes neonGlow {
+    0% {
+        border-color: #39ff14;
+        box-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14, 0 0 20px #39ff14;
+    }
+    100% {
+        border-color: #0f9d58; /* Color de neón más oscuro */
+        box-shadow: 0 0 10px #0f9d58, 0 0 20px #0f9d58, 0 0 30px #0f9d58, 0 0 40px #0f9d58;
+    }
+}
+
+/* Left Section Styling */
+.left-section {
+    width: 40%;
+    background-color: #81d4fa; /* Azul cielo más fuerte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    position: relative;
+}
+
+.tab {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    color: #444; /* Negro claro */
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    color: black; /* Negro */
+    font-weight: bold;
+    background: white; /* Blanco */
+    border-radius: 50px 0 0 50px;
+    padding: 12px 20px;
+    transform: translateX(20px);
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab:not(.active):hover {
+    color: #555; /* Gris oscuro */
+}
+
+/* Right Section Styling */
+.right-section {
+    width: 60%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+/* Styling for the logo image */
+.logo img {
+    width: 80px; /* Ajusta según lo que necesites */
+    height: 80px; /* Mantén las proporciones de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+    margin-bottom: 40px;
+}
+
+/* Animations for form transitions */
+.login-form, .signin-form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: scale(0.9);
+    animation: fadeIn 0.5s forwards;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc; /* Gris claro */
+    padding: 5px 0;
+    transition: border-bottom 0.3s ease;
+    margin-bottom: 15px; /* Aumenté el margen inferior entre los inputs */
+}
+
+.input-group:hover {
+    border-bottom: 2px solid #0288d1; /* Azul cielo más fuerte */
+}
+
+.input-group label {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #444; /* Negro claro */
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #555; /* Gris oscuro */
+    transition: border-color 0.3s ease;
+    padding: 10px; /* Añadí padding para mayor espacio dentro del input */
+}
+
+.input-group input::placeholder {
+    color: #ccc; /* Gris claro */
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #0288d1; /* Azul cielo más fuerte */
+}
+
+.btn-login {
+    margin-top: 20px; /* Espaciado entre inputs y botón */
+    margin-bottom: 10px; /* Espacio antes del texto de navegación */
+    width: 100%;
+    background-color: #0288d1; /* Azul cielo más fuerte */
+    border: none;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #0277bd; /* Azul más oscuro */
+}
+
+/* Styling for the "Have an account?" and "Don't have an account?" text */
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: black; /* Texto en negro */
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.switch .link {
+    margin-left: 5px;
+    text-decoration: underline;
+    color: #0288d1;
+}
+
+/* Form fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
